@@ -2,8 +2,8 @@
  * @Author: Jinqi Li
  * @Date: 2021-07-30 13:30:05
  * @LastEditors: Jinqi Li
- * @LastEditTime: 2021-07-30 15:42:40
- * @FilePath: \react-firebase-authentication\src\components\App\index.js
+ * @LastEditTime: 2021-08-05 10:12:22
+ * @FilePath: \educativeProjects\react-firebase-authentication\src\components\App\index.js
  */
 import React from 'react';
 import { 
@@ -21,6 +21,7 @@ import AccountPage from '../Account';
 import AdminPage from '../Admin';
 
 import * as ROUTES from '../../constants/routes';
+import { withAuthentication } from '../Session';
 
 const App = () => (
     <Router>
@@ -40,4 +41,4 @@ const App = () => (
     </Router>
 );
 
-export default App;
+export default withAuthentication(App);

@@ -2,8 +2,8 @@
  * @Author: Jinqi Li
  * @Date: 2021-07-30 13:19:47
  * @LastEditors: Jinqi Li
- * @LastEditTime: 2021-07-30 14:36:31
- * @FilePath: \react-firebase-authentication\src\index.js
+ * @LastEditTime: 2021-08-02 14:00:41
+ * @FilePath: \educativeProjects\react-firebase-authentication\src\index.js
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -11,10 +11,12 @@ import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
+import Firebase, { FirebaseContext } from './components/Firebase';
+
 ReactDOM.render(
-  <React.StrictMode>
+  <FirebaseContext.Provider value={new Firebase()}>
     <App />
-  </React.StrictMode>,
+  </FirebaseContext.Provider>,
   document.getElementById('root')
 );
 
